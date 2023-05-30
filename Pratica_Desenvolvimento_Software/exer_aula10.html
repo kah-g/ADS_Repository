@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercicios Aula 10 - Atividade Pratica</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Usando funcoes matematicas do javascript</h1>
+        <!--cada formula matematica dentro do form tem suas caixas de input e um botao que mostra o resultado em um alert-->
+        <!--tambem aparece o resultado no canto direito da tela apos o clciar no botao-->
+        <form>
+            <fieldset style="width: 25%; display: inline;">
+            <p>Cosseno</p>
+            <input name="cosseno" id="numCos" type="number" placeholder="Numero" >
+            <button type="button" id="resCosseno">Resultado</button>
+            <p id="pCos" style="text-align: right;">Resultado: </p>
+            <script>
+                function getCoss () {
+                    var cosRes = document.getElementById("numCos").value;
+                    var res = Math.cos(cosRes);
+                    document.getElementById("pCos").innerHTML = res;
+                    alert(res);
+                }
+                document.getElementById("resCosseno").addEventListener("click", getCoss);
+            </script>
+            </fieldset>
+            <fieldset style="width: 25%; display: inline;"> 
+            <p>Maximo</p>
+            <input name="maximo1" id="numMax1" type="number" placeholder="Valor 1">
+            <input name="maximo2" id="numMax2" type="number" placeholder="Valor 2">
+            <button type="button" id="resMaximo">Resultado</button>
+            <p id="pMax" style="text-align: right;">Resultado: </p>
+            <script>
+                function getMax () {
+                    var maxRes1 = document.getElementById("numMax1").value;
+                    var maxRes2 = document.getElementById("numMax2").value;
+                    var res = Math.max(maxRes1, maxRes2);
+                    document.getElementById("pMax").innerHTML = res;
+                    alert(res);
+                }
+                document.getElementById("resMaximo").addEventListener("click", getMax);
+            </script>
+            </fieldset>
+            <fieldset style="width: 25%; display: inline;">
+            <p>Minimo</p>
+            <input name="minimo1" id="numMin1" type="number" placeholder="Valor 1">
+            <input name="minimo2" id="numMin2" type="number" placeholder="Valor 2">
+            <button type="button" id="resMinimo">Resultado</button>
+            <p id="pMin" style="text-align: right;">Resultado: </p>
+            <script>
+                function getMin () {
+                    var minRes1 = document.getElementById("numMin1").value;
+                    var minRes2 = document.getElementById("numMin2").value;
+                    var res = Math.min(minRes1, minRes2);
+                    document.getElementById("pMin").innerHTML = res;
+                    alert(res);
+                }
+                document.getElementById("resMinimo").addEventListener("click", getMin);
+            </script>
+            </fieldset>
+            <fieldset style="width: 25%; display: inline;">
+            <p>Exponenciacao</p>
+            <input name="base" id="base" type="number" placeholder="Base">
+            <input name="expoente" id="expoente" type="number" placeholder="Expoente">
+            <button type="button" id="resExp">Resultado</button>
+            <p id="pExp" style="text-align: right;">Resultado: </p>
+            <script>
+                function getExp () {
+                    var base = document.getElementById("base").value;
+                    var expoente = document.getElementById("expoente").value;
+                    var res = Math.pow(base, expoente);
+                    document.getElementById("pExp").innerHTML = res;
+                    alert(res);
+                }
+                document.getElementById("resExp").addEventListener("click", getExp);
+            </script>
+            </fieldset>
+            <fieldset style="width: 25%; display: inline;">
+            <p>Random</p>
+            <input name="random" id="numRan" type="number" placeholder="Valor Maximo para o Random" >
+            <button type="button" id="resRan">Resultado</button>
+            <p id="pRan" style="text-align: right;">Resultado: </p>
+            <script>
+                function getRan () {
+                    var ranRes = document.getElementById("numRan").value;
+                    var res = Math.floor(Math.random() * ranRes);
+                    document.getElementById("pRan").innerHTML = res;
+                    alert(res);
+                }
+                document.getElementById("resRan").addEventListener("click", getRan);
+            </script>
+            </fieldset>
+            <fieldset style="width: 25%; display: inline;">
+            <p>Raiz Quadrada</p>
+            <input name="raiz" id="numRaiz" type="number" placeholder="Valor" >
+            <button type="button" id="resRaiz">Resultado</button>
+            <p id="pRai" style="text-align: right;">Resultado: </p>
+            <script>
+                function getRaiz () {
+                    var raizRes = document.getElementById("numRaiz").value;
+                    var res = Math.sqrt(raizRes);
+                    document.getElementById("pRai").innerHTML = res;
+                    alert(res);
+                }
+                document.getElementById("resRaiz").addEventListener("click", getRaiz);
+            </script>
+            </fieldset>
+        </form>
+    </body>
+</html>

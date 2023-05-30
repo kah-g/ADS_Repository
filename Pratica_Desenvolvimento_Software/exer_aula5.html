@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercicio aula 5</title>
+    </head>
+    <body>
+        <dialog open>
+            <!--Todos os inputs deveriam ter id, nao tem por preguica minha-->
+            <!--A opcao dialog nao e exatamente o que eu esperava e nem havia sido mostrado em aula, mas e interessante-->
+            <form name="cadastro" id="cadastro" method="dialog">
+                <p>Digite o seu nome:</p>
+                <input name="campoNome" type="text" placeholder="Nome">
+                <p>Digite a senha:</p>
+                <input name="campoSenha" type="password" placeholder="Senha">
+                <p>Digite o seu e-mail:</p>
+                <input name="campoMail" type="email" placeholder="Email">
+                <p>Selecione a sua faixa etária:</p>
+                <input name="campoFaixa" type="radio"> 18 a 28 anos
+                <input name="campoFaixa" type="radio"> 29 a 39 anos
+                <input name="campoFaixa" type="radio"> 40 a 50 anos
+                <input name="campoFaixa" type="radio"> Maiores de 60 anos
+                <p>Renda Mensal Familiar</p>
+                <select>
+                    <option value="2,9">Até R$2,9 mil</option>
+                    <option value="7,1">De R$2,9 mil até R$7,1 mil</option>
+                    <option value="22">De R$7,1 mil até R$22 mil</option>
+                    <option value="+22">Mais de R$22 mil</option>
+                </select>
+                <p><button type="submit" id="enviar">Enviar</button></p>
+            </form>
+        </dialog>
+    </body>
+</html>
