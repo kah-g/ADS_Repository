@@ -2,7 +2,7 @@
 class PrimeiroPrograma
 {
     //modulo principal
-    public static void main (string dk[])
+    public static void main (String dk[])
     {
         //decalracao de variaveis
         int inteiro = 101;
