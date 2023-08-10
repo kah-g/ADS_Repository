@@ -15,7 +15,7 @@ public class exer_aula_2 {
             vetSoma[i] = myS.nextInt();
             somaV = somaV + vetSoma[i];
         }
-        System.out.println("Vetor gerado: ");
+        System.out.println("Vetor gerado: "); //for criado pra printar o vetor bonitinho
         for (i=0; i <= 2; i++) {
             System.out.print(vetSoma[i]);
             if (i == 0 || i == 1) {
