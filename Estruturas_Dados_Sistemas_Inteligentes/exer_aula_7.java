@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class exer_aula_7 {
     //preciso terminar
 
@@ -13,7 +15,7 @@ public class exer_aula_7 {
         }
 
         public boolean pilhaVazia (Pilha nums) {
-            if (nums.topo = -1) {
+            if (nums.topo == -1) {
                 return true;
             }
             else {
@@ -21,7 +23,7 @@ public class exer_aula_7 {
             }
         }
 
-        public boolean pilhaCheia () {
+        public boolean pilhaCheia (Pilha nums) {
             if (topo >= tamanho-1) {
                 return true;
             }
@@ -30,8 +32,8 @@ public class exer_aula_7 {
             }
         }
 
-        public void empilhar (int elemento) {
-            if (! pilhaCheia()) {
+        public void empilhar (int elemento, Pilha nums) {
+            if (! pilhaCheia(nums)) {
                 topo = topo +1;
                 vetor[topo] = elemento;
             }
@@ -40,10 +42,10 @@ public class exer_aula_7 {
             }
         }
 
-        public int desempilhar () {
+        public int desempilhar (Pilha nums) {
             int desempilhado = 0;
 
-            if (pilhaVazia()) {
+            if (pilhaVazia(nums)) {
                 System.out.println("Pilha Vazia!");
             }
             else {
@@ -53,22 +55,26 @@ public class exer_aula_7 {
             }
         }
 
-        public void elementoTopo () {
-            if (!pilhaVazia()) {
-                System.out.println(pilha[topo]);
+        public void elementoTopo (Pilha nums) {
+            if (!pilhaVazia(nums)) {
+                System.out.println(nums[topo]);
             }
             else {
                 System.out.println("Pilha Vazia!");
             }
         }
 
-        public void printaPilha () {
+        public void printaPilha (Pilha nums) {
             for (int i= 0; i < tamanho-1; i++) {
                 System.out.println();
             }
         }
     }
     public static void main (String [] args) {
-
+        System.out.println("Qual sera o tamanho da pilha?");
+        Scanner myS = new Scanner(System.in); //instanciando o scanner
+        int tam = myS.nextInt();
+        Pilha pilha1 = new Pilha(tam);
+        System.out.println("Vamos adicionar elementos a pilha.");
     }
 }
