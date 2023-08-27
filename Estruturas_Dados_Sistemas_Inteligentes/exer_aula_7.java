@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class exer_aula_7 {
     //preciso terminar
+    //trabalhando com pilhas
 
     class Pilha {
         int tamanho;

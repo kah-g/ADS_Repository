@@ -51,6 +51,7 @@ public class exer_aula_2 {
         }
         System.out.println("A soma dos valores digitados e: " + somaM);
 
+        myS.close();
         System.exit(0);
     }
 }
